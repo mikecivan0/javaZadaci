@@ -25,7 +25,8 @@ public class Zivotinja {
 		}
 		
 		
-		System.out.println(Glasanje.glasanje(indexZivotinje));		
+		System.out.println(Glasanje.glasanje(indexZivotinje));	
+		
 		
 	}
 	

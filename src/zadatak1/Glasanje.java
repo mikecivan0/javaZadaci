@@ -9,19 +9,19 @@ public class Glasanje {
 		String glas = "";
 		switch (i) {
 		case 1:
-			glas = "Mijau";
+			glas = "Maèka kaže mijau";
 			break;
 
 		case 2:
-			glas = "Vau-vau";
+			glas = "Pas kaže vau-vau";
 			break;
 
 		case 3:
-			glas = "Muuuuu";
+			glas = "Krava kaže muuuuu";
 			break;
 
 		case 4:
-			glas = "Kokodak";
+			glas = "Koka kaže kokodak";
 			break;
 		}
 
