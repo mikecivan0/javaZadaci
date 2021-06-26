@@ -27,7 +27,7 @@ public class Zivotinja {
 		
 		System.out.println(Glasanje.glasanje(indexZivotinje));	
 		
-		
+		zivotinja.close();
 	}
 	
 	
