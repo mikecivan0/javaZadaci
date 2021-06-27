@@ -18,6 +18,7 @@ public class Zivotinja {
 			indexZivotinje = zivotinja.nextInt();
 			
 			if(provjeraVrijednosti.provjeriUnos(indexZivotinje, 1, 4)){
+				zivotinja.close();
 				break;
 			}
 			
@@ -27,7 +28,7 @@ public class Zivotinja {
 		
 		System.out.println(Glasanje.glasanje(indexZivotinje));	
 		
-		zivotinja.close();
+		
 	}
 	
 	
