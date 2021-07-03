@@ -97,7 +97,7 @@ public class Matrica {
 
 		for (int i = 0; i < redovi; i++) {
 			for (int j = 0; j < stupci; j++) {
-				System.out.print(dijagonalnoZrcalnaSpiralnaMatrica[i][j] + "\t");
+				System.out.print(matrica[i][j] + "\t");
 			}
 
 			System.out.println();
