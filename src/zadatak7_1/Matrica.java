@@ -32,32 +32,46 @@ public class Matrica {
 		int maxRedovi = redovi - 1;
 		int minStupci = 0;
 		int maxStupci = stupci - 1;
+		int umnozak = redovi*stupci;
 
 		// rapored for petlji u while petlji
 		// je rapored punjenja matrice
-		while (COUNTER <= redovi * stupci) {
+		petljaWhile:
+		while (COUNTER <= umnozak) {
 			// ispis reda sa desne na lijevu stranu
 			for (int i = maxStupci; i >= minStupci; i--) {
 				obicnaSpiralnaMatrica[maxRedovi][i] = COUNTER;
 				COUNTER++;
+				if(COUNTER>umnozak) {
+					break petljaWhile;
+				}
 			}
 			
 			// ispis stupca od dolje prema gore
 			for (int i = maxRedovi - 1; i >= minRedovi; i--) {
 				obicnaSpiralnaMatrica[i][minStupci] = COUNTER;
 				COUNTER++;
+				if(COUNTER>umnozak) {
+					break petljaWhile;
+				}
 			}
 			
 			// ispis reda sa lijeve na desnu stranu
 			for (int i = minStupci+1; i <= maxStupci; i++) {
 				obicnaSpiralnaMatrica[minRedovi][i] = COUNTER;
 				COUNTER++;
+				if(COUNTER>umnozak) {
+					break petljaWhile;
+				}
 			}
 
 			// ispis stupca od gore prema dolje
 			for (int i = minRedovi + 1; i <= maxRedovi-1; i++) {
 				obicnaSpiralnaMatrica[i][maxStupci] = COUNTER;
 				COUNTER++;
+				if(COUNTER>umnozak) {
+					break petljaWhile;
+				}
 			}
 
 			// na kraju ispisa svakog okvira smanjiti 
