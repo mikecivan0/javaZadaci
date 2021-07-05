@@ -22,8 +22,27 @@ public class Start {
 		* Integer.parseInt(JOptionPane.showInputDialog("poruka"));
 		*/
 		
-		vrijednosti.setRedovi(Unosi.JOPDialogInt("Koliko æe redova imati tablica?"));
-		vrijednosti.setStupci(Unosi.JOPDialogInt("Koliko æe stupaca imati tablica"));
+		for(;;) {
+			int redovi = Unosi.JOPDialogInt("Koliko æe redova imati tablica?");
+			
+			if(redovi>1) {
+				vrijednosti.setRedovi(redovi);
+				break;
+			}
+			poruka("Nakon što klikneš na 'OK' molim unesi broj veæi od 0");
+			
+		}
+		
+		for(;;) {
+			int stupci = Unosi.JOPDialogInt("Koliko æe stupaca imati tablica");
+			
+			if(stupci>1) {
+				vrijednosti.setStupci(stupci);
+				break;
+			}
+			poruka("Nakon što klikneš na 'OK' molim unesi broj veæi od 0");
+			
+		}
 		
 		for(;;) {
 			int smjer = Unosi.JOPDialogInt("Na koji naèin æe se ispisati spiralna matrica?\n\n"
@@ -34,7 +53,7 @@ public class Start {
 				break;
 			}
 			
-			JOptionPane.showInternalMessageDialog(null, "Nakon što klikneš na 'OK' molim unesi 1 ili 2");
+			poruka("Nakon što klikneš na 'OK' molim unesi 1 ili 2");
 		}
 		
 		for(;;) {
@@ -48,7 +67,7 @@ public class Start {
 				break;
 			}
 			
-			JOptionPane.showInternalMessageDialog(null, "Nakon što klikneš na 'OK' molim unesi 1, 2, 3 ili 4");
+			poruka("Nakon što klikneš na 'OK' molim unesi 1, 2, 3 ili 4");
 		}
 		
 	
@@ -62,6 +81,10 @@ public class Start {
 		new Start();
 	}
 	
+	// pomoæna funkcija za ispis poruke	
+	private void poruka(String poruka) {
+		JOptionPane.showInternalMessageDialog(null, poruka);
+	}
 	
 
 }
