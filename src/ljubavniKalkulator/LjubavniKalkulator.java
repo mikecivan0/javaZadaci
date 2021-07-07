@@ -89,7 +89,7 @@ public class LjubavniKalkulator {
 				// iteriraj do polovice velièine niza
 				int breakpoint = velicinaNiza/2;
 				
-				for (int i = 0; i < breakpoint / 2; i++) {
+				for (int i = 0; i <= breakpoint / 2; i++) {
 					
 					int zadnji = (velicinaNiza - i) - 1;
 				
