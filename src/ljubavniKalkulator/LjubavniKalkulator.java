@@ -47,8 +47,11 @@ public class LjubavniKalkulator {
 		
 		for(int brojZaProvjeru : nizBrojeva) {
 			if(brojZaProvjeru>9) {
-				provjereniNizBrojeva.add(10);
-				provjereniNizBrojeva.add(brojZaProvjeru-10);
+				provjereniNizBrojeva.add(brojZaProvjeru/10);
+				int ostatak = brojZaProvjeru%10;
+				if(ostatak!=0) {
+					provjereniNizBrojeva.add(ostatak);
+				}				
 			}else {
 				provjereniNizBrojeva.add(brojZaProvjeru);
 			}
@@ -89,7 +92,7 @@ public class LjubavniKalkulator {
 				// iteriraj do polovice velièine niza
 				int breakpoint = velicinaNiza/2;
 				
-				for (int i = 0; i <= breakpoint / 2; i++) {
+				for (int i = 0; i <= breakpoint; i++) {
 					
 					int zadnji = (velicinaNiza - i) - 1;
 				
