@@ -3,6 +3,8 @@ package ljubavniKalkulator;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import alati.Unosi;
 
 public class LjubavniKalkulator {
@@ -17,12 +19,11 @@ public class LjubavniKalkulator {
 		// ovdje æe se pohranjivati brojevi za izraèun
 		List<Integer> pocetniNizBrojeva = new ArrayList<Integer>();
 
-		// unos imena
-		ona = Unosi.JOPDialogStringIsEmpty("Unesi njeno ime", "Unos ne može biti prazan");
-		on = Unosi.JOPDialogStringIsEmpty("Unesi njegovo ime", "Unos ne može biti prazan");
+		// unos imena i micanje razmaka
+		ona = Unosi.JOPDialogStringIsEmpty("Unesi njeno ime", "Unos ne može biti prazan").replaceAll("\\s", "");
+		on = Unosi.JOPDialogStringIsEmpty("Unesi njegovo ime", "Unos ne može biti prazan").replaceAll("\\s", "");
 
-		// micanje razmaka i spajanje u jedan string
-		sveZajednoBezRazmaka = ona.replaceAll("\\s", "") + on.replaceAll("\\s", "");
+		sveZajednoBezRazmaka = ona + on;
 
 		// pretvaranje u array list
 		for (char znak : sveZajednoBezRazmaka.toCharArray()) {
@@ -164,7 +165,12 @@ public class LjubavniKalkulator {
 	}
 
 	public static void main(String[] args) {
-		new LjubavniKalkulator();
+		try {
+			new LjubavniKalkulator();
+		} catch (Exception e) {
+			JOptionPane.showInternalMessageDialog(null, "Ups! Dogodila se pogreška");
+		}
+		
 	}
 
 }
