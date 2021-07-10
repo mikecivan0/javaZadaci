@@ -2,9 +2,7 @@ package ljubavniKalkulator;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.JOptionPane;
-
 import alati.Unosi;
 
 public class LjubavniKalkulator {
@@ -170,7 +168,7 @@ public class LjubavniKalkulator {
 		} catch (Exception e) {
 			JOptionPane.showInternalMessageDialog(null, "Ups! Dogodila se pogreška");
 		}
-		
+
 	}
 
 }
